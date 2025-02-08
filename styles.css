@@ -1,0 +1,278 @@
+/* Global styles */
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #4caf50;
+  color: white;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Make sure navbar stays on top */
+}
+
+/* Ensure there's enough padding at the top of the page */
+body {
+  padding-top: 60px; /* Adjust this based on the navbar's height */
+}
+
+/* Other existing CSS stays the same */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: #f4f7fb; /* Light gray background */
+  color: #333;
+}
+
+/* Dark theme */
+body.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.light-theme {
+  background-color: #f4f7fb;
+  color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #3e4e5e; /* Deep Navy */
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #fff;
+  flex: 1;
+  margin-left: 20px;
+}
+
+/* Hamburger and theme toggle */
+.hamburger-toggle,
+.theme-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white;
+  margin-left: 1rem;
+}
+
+.theme-toggle i {
+  font-size: 1.5rem;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  margin-top: 3.5rem;
+  position: absolute; /* Initially off-screen */
+  top: 0;
+  left: -260px; /* Initially hidden */
+  width: 260px;
+  height: 100%;
+  background-color: #343f4f; /* Modern Teal-ish Dark */
+  color: white;
+  padding: 20px;
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  transition: left 0.3s ease-in-out;
+  z-index: 100; /* Ensure sidebar stays on top */
+}
+
+.sidebar.open {
+  position: fixed; /* Makes sidebar take up space when visible */
+  left: 0;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #f4a300; /* Golden Accent */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.sidebar ul li:hover {
+  color: #f4a300; /* Golden Hover Effect */
+}
+
+/* Scene container */
+.scene-container {
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+  scroll-behavior: smooth;
+}
+
+/* Scene styling */
+.scene {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease, background-color 0.3s;
+}
+
+body.dark-theme .scene {
+  background-color: #2a2a2a;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.light-theme .scene {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlight the scene name */
+.scene h2 {
+  font-size: 1.8rem;
+  color: #3e4e5e; /* Deep Navy */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+body.dark-theme .scene h2 {
+  color: #f4a300; /* Golden on Dark */
+}
+
+body.light-theme .scene h2 {
+  color: #3e4e5e; /* Keep it consistent */
+}
+
+/* Scene content styling */
+.scene p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: left;
+}
+
+body.dark-theme .scene p {
+  color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar h1 {
+    font-size: 1.5rem;
+  }
+
+  .sidebar {
+    width: 230px;
+  }
+
+  .scene-container {
+    margin-left: 0;
+  }
+
+  .scene {
+    padding: 15px;
+  }
+
+  .scene h2 {
+    font-size: 1.5rem;
+  }
+
+  .scene p {
+    font-size: 1rem;
+  }
+
+  .hamburger-toggle {
+    display: block;
+  }
+
+  .navbar h1 {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .container {
+    padding: 5px;
+  }
+
+  .scene-container {
+    margin-left: 0;
+  }
+
+  .scene h2 {
+    font-size: 1.2rem;
+  }
+
+  .scene p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Plot Introduction Styling */
+.plot-introduction {
+  background-color: #fff; /* Light background for Plot */
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.plot-introduction h2 {
+  font-size: 2rem;
+  color: #3e4e5e; /* Deep Navy */
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.plot-introduction p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+body.dark-theme .plot-introduction {
+  background-color: #2a2a2a; /* Dark background for dark mode */
+  color: #e0e0e0;
+}
+
+body.dark-theme .plot-introduction h2 {
+  color: #f4a300; /* Golden Accent for Dark Theme */
+}
+
+body.dark-theme .plot-introduction p {
+  color: #e0e0e0;
+}

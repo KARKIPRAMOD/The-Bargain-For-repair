@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Script Viewer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Font Awesome CDN for the toggle icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar with title and theme toggle button -->
+    <nav class="navbar">
+      <button class="hamburger-toggle">
+        <i class="fas fa-bars"></i>
+        <!-- Hamburger icon -->
+      </button>
+      <h1>A Bargain for Repair</h1>
+      <div class="nav-icons">
+        <button class="theme-toggle">
+          <i id="theme-icon" class="fas fa-sun"></i>
+          <!-- Sun icon for light theme -->
+        </button>
+      </div>
+    </nav>
+
+    <!-- Sidebar with Scene Names -->
+    <aside class="sidebar">
+      <h2>Ticks</h2>
+      <ul id="scene-list">
+        <!-- Scene names will be dynamically added here -->
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="container">
+      <section id="plot-introduction" class="plot-introduction">
+        <h2>Plot Introduction</h2>
+        <p>
+          You're one of the few who will be reading "A Bargain for Repair".
+          You're a chosen one, and your review will be respected—so feel free to
+          be as honest and harsh as you like. Just give the raw feedback. In
+          this story, a watchmaker doesn’t just fix watches; he trades time (I
+          know sound Weird). Each repair comes with a price—an exchange of the
+          owner's life’s time. (Prepare to dive into a story where time is both
+          a gift and a curse, and the cost of second chances may be higher than
+          you think)
+        </p>
+      </section>
+      <div id="scene-container" class="scene-container">
+        <!-- Dynamic content will be added here -->
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
